@@ -28,8 +28,8 @@ TARGET_KERNEL_SOURCE := kernel/huawei/msm8928
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000 --dt device/huawei/mt2l03/prebuilt/dt.img
 # Build DT (To Do)
-BOARD_CUSTOM_BOOTIMG_MK := device/huawei/mt2l03/mkbootimg.mk
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
+# BOARD_CUSTOM_BOOTIMG_MK := device/huawei/mt2l03/mkbootimg.mk
+# BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
