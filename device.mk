@@ -8,6 +8,7 @@ $(call inherit-product-if-exists, vendor/huawei/mt2l03/mt2l03-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/huawei/mt2l03/overlay
 
 LOCAL_PATH := device/huawei/mt2l03
+KERNEL_PATH := kernel/huawei/msm8928
 ifeq ($(TARGET_PREBUILT_KERNEL),)
         LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -19,6 +20,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/etc/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
     $(LOCAL_PATH)/prebuilt/dt.img:dt.img \
     $(LOCAL_PATH)/kernel:kernel
+    $(KERNEL_PATH)/usr:obj/KERNEL_OBJ/usr
 
 # Off-mode charging
 PRODUCT_PACKAGES += \
